@@ -1,0 +1,6 @@
+dependencies {
+  implementation project(':pim-common')
+  implementation project(':pim-core')
+  implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+  runtimeOnly 'mysql:mysql-connector-java'
+}

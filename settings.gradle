@@ -1,0 +1,8 @@
+rootProject.name = 'pim'
+
+include 'pim-bootstrap'
+include 'pim-common'
+include 'pim-core'
+include 'pim-persistence-mysql'
+include 'pim-persistence-fake'
+include 'pim-restapi'

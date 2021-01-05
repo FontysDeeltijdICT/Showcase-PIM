@@ -1,0 +1,20 @@
+plugins {
+  id "org.springframework.boot" version "2.1.9.RELEASE"
+}
+
+apply plugin: 'io.spring.dependency-management'
+
+springBoot {
+  mainClassName = 'com.mitchellton.pim.PimApplication'
+}
+
+dependencies {
+
+  implementation project(':pim-common')
+  implementation project(':pim-core')
+  implementation project(':pim-restapi')
+  implementation project(':pim-persistence-mysql')
+  implementation project(':pim-persistence-fake')
+  implementation ('org.springframework.boot:spring-boot-starter-web')
+
+}
