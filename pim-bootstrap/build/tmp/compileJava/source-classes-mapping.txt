@@ -1,2 +1,0 @@
-com/mitchellton/pim/PimApplication.java
- com.mitchellton.pim.PimApplication

@@ -1,8 +1,0 @@
-com/mitchellton/pim/service/DatasheetService.java
- com.mitchellton.pim.service.DatasheetService
-com/mitchellton/pim/service/BaseService.java
- com.mitchellton.pim.service.BaseService
-com/mitchellton/pim/service/PartService.java
- com.mitchellton.pim.service.PartService
-com/mitchellton/pim/service/DistributorService.java
- com.mitchellton.pim.service.DistributorService
