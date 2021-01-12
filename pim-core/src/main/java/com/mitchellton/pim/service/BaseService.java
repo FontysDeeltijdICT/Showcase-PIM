@@ -8,7 +8,7 @@ import java.util.Optional;
 import java.util.UUID;
 
 public abstract class BaseService<DAO extends Dao<DO>, DO extends Do> {
-    public final DAO dao;
+    protected final DAO dao;
 
     public BaseService(DAO dao) {
         this.dao = dao;

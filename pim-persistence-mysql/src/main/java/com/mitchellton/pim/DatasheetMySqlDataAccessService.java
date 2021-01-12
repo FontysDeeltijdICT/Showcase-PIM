@@ -45,12 +45,11 @@ public class DatasheetMySqlDataAccessService implements DatasheetDao {
     }
 
     @Override
-    public Optional<DatasheetDo> selectByPartId(UUID id) {
+    public List<DatasheetDo> selectByPartId(UUID id) {
         String sql = "SELECT * FROM Datasheets WHERE partUUID = :partuuid";
         SqlParameterSource namedParameters = new MapSqlParameterSource().addValue("partuuid", id.toString());
-        List<DatasheetDo> parts = namedParameterJdbcTemplate.query(sql, namedParameters, datasheetMapper);
-        if(parts.size() == 0) return Optional.empty();
-        return Optional.of(parts.get(0));
+        List<DatasheetDo> datasheets = namedParameterJdbcTemplate.query(sql, namedParameters, datasheetMapper);
+        return datasheets;
     }
 
     @Override

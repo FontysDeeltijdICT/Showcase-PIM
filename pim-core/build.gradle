@@ -3,4 +3,8 @@ dependencies {
 
     implementation 'org.springframework.boot:spring-boot-starter-validation'
     implementation 'javax.transaction:javax.transaction-api'
+
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+    testImplementation project(':pim-common')
+    testImplementation project(':pim-persistence-fake')
 }

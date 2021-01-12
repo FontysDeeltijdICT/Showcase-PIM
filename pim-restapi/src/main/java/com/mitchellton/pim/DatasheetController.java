@@ -40,10 +40,10 @@ public class DatasheetController {
     }
 
     @GetMapping(value = "/part/{partid}")
-    public DatasheetJsonObject getByPartId(@PathVariable("partid") UUID id) {
-        DatasheetDo response = datasheetService.getByPartId(id).orElse(null);
-        if(response == null) return null;
-        return new DatasheetJsonObject(response);
+    public List<DatasheetDo> getByPartId(@PathVariable("partid") UUID id) {
+        @SuppressWarnings("unchecked")
+        List<DatasheetDo> response = (List) datasheetService.getByPartId(id);
+        return response;
     }
 
     @DeleteMapping(path = "{id}")

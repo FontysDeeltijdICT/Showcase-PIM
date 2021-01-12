@@ -7,6 +7,7 @@ public class DatasheetDo implements Do{
     private final UUID id;
 
     private final UUID partId;
+    private PartDo part; // Can be loaded in by the service.
 
     @NotBlank
     private final String filename;
@@ -19,6 +20,7 @@ public class DatasheetDo implements Do{
 
     public DatasheetDo(DatasheetDo datasheetDo) {
         this(datasheetDo.id, datasheetDo.partId, datasheetDo.filename);
+        this.part = datasheetDo.part;
     }
 
     public UUID getId() {
@@ -31,5 +33,13 @@ public class DatasheetDo implements Do{
 
     public String getFilename() {
         return filename;
+    }
+
+    public PartDo getPart() {
+        return part;
+    }
+
+    public void setPart(PartDo part) {
+        this.part = part;
     }
 }
